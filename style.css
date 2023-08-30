@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-image: url("https://s1.hostingkartinok.com/uploads/images/2023/08/0cc72ab9540dea4703afbb7990017c6d.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body::before {
+  content: "";
+  position: fixed;
+  margin: 0 220px;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://s1.hostingkartinok.com/uploads/images/2023/08/9fba44a225e6b04b9f27b7bd5d68ad77.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  background: linear-gradient(to right, #161a16 0%, #161a16 100%);
+  padding: 0 310px;
+}
+header img {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 10px;
+  margin: 17px;
+}
+.header-title__accept {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 14px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.header-title__accept-image {
+  color: #fff;
+  background-image: url("./images/button-sv.svg");
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.header-title__accept-image__text {
+  margin-top: 5px;
+}
+.header-title button {
+  border-radius: 30px;
+}
+.header-title > :last-child {
+  height: 30px;
+  width: 135px;
+}
+
+.header-title__icon {
+  display: flex;
+  justify-content: right;
+  width: 215px;
+  height: 86px;
+  background-image: url("/images/rectangle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: 20rem;
+}
+.header-title__icon-title {
+  color: var(--background, #293b2b);
+  margin: 14px 21px;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: normal;
+}
+.header-title__icon-title__subtitle {
+  color: var(--background, #293b2b);
+  text-align: center;
+  font-family: Inter;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.general-content {
+  height: 600px;
+  width: 700px;
+  padding: 0 310px;
+}
+.general-content__title {
+  color: #fff;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+  font-family: Inter;
+  font-size: 43.557px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: normal;
+}
+.general-content__title-subtitle {
+  color: #fff;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+  font-family: Inter;
+  font-size: 43.557px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: normal;
+}
+.general-content__title-subtitle__counter {
+  color: #fff;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+  font-family: Inter;
+  font-size: 56.624px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: normal;
+}
+.general-content__statistick pre {
+  color: #fff;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+.general-content__register {
+  background-image: url("/images/button-bold.svg");
+  background-repeat: no-repeat;
+  height: 100px;
+}
+.general-content__register-title {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 148.9%;
+}
+
+.point {
+  display: flex;
+  justify-content: center;
+  margin: 0 -10px;
+}
+.point_one {
+  width: 10px;
+  height: 10px;
+  border-radius: 1010px;
+  background: var(--grey, #d9d9d9);
+  margin: 0 10px;
+}
+.point_two {
+  width: 10px;
+  height: 10px;
+  border-radius: 1010px;
+  background: linear-gradient(149deg, #63d737 0%, #058048 100%);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+@font-face {
+  font-family: "MyFont";
+  src: url("./fonts/Inter-Black.otf") format("opentype");
+}/*# sourceMappingURL=style.css.map */
