@@ -13,6 +13,7 @@ body {
     margin: 0 220px;
     width: 100%;
     height: 100%;
+    z-index: -1;
     background-image: url("https://s1.hostingkartinok.com/uploads/images/2023/08/9fba44a225e6b04b9f27b7bd5d68ad77.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -34,6 +35,12 @@ header {
   & img {
     display: flex;
     justify-content: flex-start;
+
+    &:hover {
+      background-color: rgb(24, 196, 38);
+      color: rgb(10, 10, 10);
+      cursor: pointer;
+    }
   }
 }
 
@@ -47,7 +54,7 @@ header {
 
   &__accept {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     margin: 0 14px;
     color: #fff;
@@ -56,6 +63,15 @@ header {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+
+    &:hover {
+      background-color: #63d737;
+      color: rgb(246 245 245);
+      cursor: pointer;
+      width: 86px;
+      height: 30px;
+      border-radius: 99.153px;
+    }
   }
 
   &__accept-image {
@@ -68,6 +84,11 @@ header {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+
+    &:hover {
+      color: rgb(15, 15, 15);
+      cursor: pointer;
+    }
 
     &__text {
       margin-top: 5px;
@@ -139,6 +160,7 @@ header {
       font-style: italic;
       font-weight: 900;
       line-height: normal;
+      margin-left: 36px;
 
       &__counter {
         color: #fff;
@@ -148,6 +170,7 @@ header {
         font-style: italic;
         font-weight: 900;
         line-height: normal;
+        margin-left: 36px;
       }
     }
   }
@@ -166,6 +189,12 @@ header {
     background-image: url("/images/button-bold.svg");
     background-repeat: no-repeat;
     height: 100px;
+    opacity: 0;
+    animation: fadeIn 5s infinite;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     &-title {
       color: #fff;
@@ -182,7 +211,12 @@ header {
 .point {
   display: flex;
   justify-content: center;
-  margin: 0 -10px;
+  margin: 5rem 20rem;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &_one {
     width: 10px;
@@ -200,12 +234,109 @@ header {
   }
 }
 
+.footer-content {
+  background: var(--Background, #293b2b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.8;
+
+  &__items {
+    padding: 110px 310px;
+
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-left: 65px;
+    display: flex;
+
+    & img {
+      margin-left: 85px;
+      z-index: 2;
+    }
+
+    &-left {
+      height: 45px;
+
+      &__subscribe {
+        height: 40px;
+        width: 180px;
+        margin: 0 -29px;
+        color: #fff;
+        font-family: Inter;
+        font-size: 17.186px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("./images/subscribe.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 99.153px;
+      }
+    }
+
+    &-right {
+      display: flex;
+    }
+  }
+
+  &__icons {
+    max-width: 1255px;
+    margin-left: 7rem;
+    padding: 0px 8px 60px 16px;
+
+    &-iconUpper {
+      padding: 10px;
+
+      & img {
+        margin: 0 30px;
+      }
+    }
+
+    &-iconCamel {
+      padding: 10px;
+
+      & img {
+        margin: 0 30px;
+      }
+    }
+  }
+}
+
 footer {
   position: absolute;
   bottom: 0;
+  color: #fff;
+  font-family: "MyFont";
+  a {
+    color: rgba(28, 211, 89, 0.6);
+  }
 }
 
 @font-face {
   font-family: "MyFont";
   src: url("./fonts/Inter-Black.otf") format("opentype");
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
