@@ -30,9 +30,25 @@ header {
   background: linear-gradient(to right, #161a16 0%, #161a16 100%);
   padding: 0 310px;
 }
+@media (max-width: 768px) {
+  header {
+    font-size: 14px;
+    display: flex;
+    justify-content: end;
+  }
+}
 header img {
   display: flex;
   justify-content: flex-start;
+}
+@media (max-width: 768px) {
+  header img {
+    display: flex;
+    margin: 21px, 145px;
+    height: 18px;
+    margin-top: 22px;
+    margin-right: 120px;
+  }
 }
 header img:hover {
   background-color: rgb(24, 196, 38);
@@ -60,6 +76,11 @@ header img:hover {
   font-weight: 600;
   line-height: normal;
 }
+@media (max-width: 768px) {
+  .header-title__accept {
+    display: none;
+  }
+}
 .header-title__accept:hover {
   background-color: #63d737;
   color: rgb(246, 245, 245);
@@ -79,6 +100,12 @@ header img:hover {
   font-weight: 600;
   line-height: normal;
 }
+@media (max-width: 768px) {
+  .header-title__accept-image {
+    display: flex;
+    height: 20px;
+  }
+}
 .header-title__accept-image:hover {
   color: rgb(15, 15, 15);
   cursor: pointer;
@@ -93,6 +120,18 @@ header img:hover {
   height: 30px;
   width: 135px;
 }
+@media (max-width: 768px) {
+  .header-title > :last-child {
+    display: flex;
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 99.153px;
+  }
+}
 
 .header-title__icon {
   display: flex;
@@ -105,6 +144,12 @@ header img:hover {
   margin-left: auto;
   margin-right: 20rem;
 }
+@media (max-width: 768px) {
+  .header-title__icon {
+    height: 92px;
+    margin-left: 72px;
+  }
+}
 .header-title__icon-title {
   color: var(--background, #293b2b);
   margin: 14px 21px;
@@ -115,6 +160,12 @@ header img:hover {
   font-weight: 900;
   line-height: normal;
 }
+@media (max-width: 768px) {
+  .header-title__icon-title {
+    margin: 24px 38px;
+    font-size: 15px;
+  }
+}
 .header-title__icon-title__subtitle {
   color: var(--background, #293b2b);
   text-align: center;
@@ -124,11 +175,21 @@ header img:hover {
   font-weight: 900;
   line-height: normal;
 }
+@media (max-width: 768px) {
+  .header-title__icon-title__subtitle {
+    font-size: 16px;
+  }
+}
 
 .general-content {
   height: 600px;
   width: 700px;
   padding: 0 310px;
+}
+@media (max-width: 768px) {
+  .general-content {
+    padding: 40px;
+  }
 }
 .general-content__title {
   color: #fff;
@@ -138,6 +199,12 @@ header img:hover {
   font-style: italic;
   font-weight: 900;
   line-height: normal;
+}
+@media (max-width: 768px) {
+  .general-content__title {
+    font-size: 26px;
+    margin-left: 2.2rem;
+  }
 }
 .general-content__title-subtitle {
   color: #fff;
@@ -149,6 +216,11 @@ header img:hover {
   line-height: normal;
   margin-left: 36px;
 }
+@media (max-width: 768px) {
+  .general-content__title-subtitle {
+    font-size: 26px;
+  }
+}
 .general-content__title-subtitle__counter {
   color: #fff;
   text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
@@ -159,6 +231,12 @@ header img:hover {
   line-height: normal;
   margin-left: 36px;
 }
+@media (max-width: 768px) {
+  .general-content__title-subtitle__counter {
+    font-size: 26px;
+    margin: 0 -2.2rem;
+  }
+}
 .general-content__statistick pre {
   color: #fff;
   text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
@@ -168,6 +246,16 @@ header img:hover {
   font-weight: 600;
   line-height: 120%;
 }
+@media (max-width: 768px) {
+  .general-content__statistick pre {
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+    margin-left: -1.3rem;
+    font-style: italic;
+    font-weight: 900;
+    line-height: normal;
+  }
+}
 .general-content__register {
   background-image: url("/images/button-bold.svg");
   background-repeat: no-repeat;
@@ -175,6 +263,13 @@ header img:hover {
   opacity: 0;
   -webkit-animation: fadeIn 5s infinite;
           animation: fadeIn 5s infinite;
+}
+@media (max-width: 768px) {
+  .general-content__register {
+    margin-left: 53px;
+    margin-top: -1.3rem;
+    background-size: 33%;
+  }
 }
 .general-content__register:hover {
   cursor: pointer;
@@ -187,6 +282,12 @@ header img:hover {
   font-style: normal;
   font-weight: 600;
   line-height: 148.9%;
+}
+@media (max-width: 768px) {
+  .general-content__register-title {
+    font-size: 22px;
+    margin-left: -1.3rem;
+  }
 }
 
 .point {

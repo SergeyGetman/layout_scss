@@ -32,9 +32,22 @@ header {
   background: linear-gradient(to right, #161a16 0%, #161a16 100%);
   padding: 0 310px;
 
+  @media (max-width: 768px) {
+    font-size: 14px;
+    display: flex;
+    justify-content: end;
+  }
+
   & img {
     display: flex;
     justify-content: flex-start;
+    @media (max-width: 768px) {
+      display: flex;
+      margin: 21px, 145px;
+      height: 18px;
+      margin-top: 22px;
+      margin-right: 120px;
+    }
 
     &:hover {
       background-color: rgb(24, 196, 38);
@@ -64,6 +77,10 @@ header {
     font-weight: 600;
     line-height: normal;
 
+    @media (max-width: 768px) {
+      display: none;
+    }
+
     &:hover {
       background-color: #63d737;
       color: rgb(246 245 245);
@@ -85,6 +102,11 @@ header {
     font-weight: 600;
     line-height: normal;
 
+    @media (max-width: 768px) {
+      display: flex;
+      height: 20px;
+    }
+
     &:hover {
       color: rgb(15, 15, 15);
       cursor: pointer;
@@ -102,6 +124,17 @@ header {
   & > :last-child {
     height: 30px;
     width: 135px;
+
+    @media (max-width: 768px) {
+      display: flex;
+      color: #fff;
+      text-align: center;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      border-radius: 99.153px;
+    }
   }
 }
 
@@ -116,6 +149,11 @@ header {
   margin-left: auto;
   margin-right: 20rem;
 
+  @media (max-width: 768px) {
+    height: 92px;
+    margin-left: 72px;
+  }
+
   &-title {
     color: var(--background, #293b2b);
     margin: 14px 21px;
@@ -126,6 +164,11 @@ header {
     font-weight: 900;
     line-height: normal;
 
+    @media (max-width: 768px) {
+      margin: 24px 38px;
+      font-size: 15px;
+    }
+
     &__subtitle {
       color: var(--background, #293b2b);
       text-align: center;
@@ -134,6 +177,10 @@ header {
       font-style: italic;
       font-weight: 900;
       line-height: normal;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -142,6 +189,9 @@ header {
   height: 600px;
   width: 700px;
   padding: 0 310px;
+  @media (max-width: 768px) {
+    padding: 40px;
+  }
 
   &__title {
     color: #fff;
@@ -151,6 +201,11 @@ header {
     font-style: italic;
     font-weight: 900;
     line-height: normal;
+
+    @media (max-width: 768px) {
+      font-size: 26px;
+      margin-left: 2.2rem;
+    }
 
     &-subtitle {
       color: #fff;
@@ -162,6 +217,10 @@ header {
       line-height: normal;
       margin-left: 36px;
 
+      @media (max-width: 768px) {
+        font-size: 26px;
+      }
+
       &__counter {
         color: #fff;
         text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
@@ -171,6 +230,11 @@ header {
         font-weight: 900;
         line-height: normal;
         margin-left: 36px;
+
+        @media (max-width: 768px) {
+          font-size: 26px;
+          margin: 0 -2.2rem;
+        }
       }
     }
   }
@@ -183,6 +247,15 @@ header {
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
+
+    @media (max-width: 768px) {
+      text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+      font-size: 20px;
+      margin-left: -1.3rem;
+      font-style: italic;
+      font-weight: 900;
+      line-height: normal;
+    }
   }
 
   &__register {
@@ -191,6 +264,12 @@ header {
     height: 100px;
     opacity: 0;
     animation: fadeIn 5s infinite;
+
+    @media (max-width: 768px) {
+      margin-left: 53px;
+      margin-top: -1.3rem;
+      background-size: 33%;
+    }
 
     &:hover {
       cursor: pointer;
@@ -204,6 +283,11 @@ header {
       font-style: normal;
       font-weight: 600;
       line-height: 148.9%;
+
+      @media (max-width: 768px) {
+        font-size: 22px;
+        margin-left: -1.3rem;
+      }
     }
   }
 }

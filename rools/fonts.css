@@ -1,0 +1,63 @@
+/* Source Sans Pro */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700");
+/* JLL Hand */
+@font-face {
+  font-family: "jll-hand";
+  src: url("/fonts/Inter-Black.otf");
+}
+/* Butler */
+@font-face {
+  font-family: "Butler";
+  font-style: normal;
+  font-weight: 200;
+  src: url("/fonts/Inter-BlackItalic.otf") format("woff2"), url("/fonts/Inter-BlackItalic.otf") format("woff");
+}
+@font-face {
+  font-family: "Butler";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/Inter-Bold.otf") format("woff2"), url("/fonts/Inter-Bold.otf") format("woff");
+}
+@font-face {
+  font-family: "Butler";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/Inter-ExtraBold.otf") format("woff2"), url("/fonts/Inter-ExtraBold.otf") format("woff");
+}
+@font-face {
+  font-family: "Butler";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/Inter-Italic.otf") format("woff2"), url("/fonts/Inter-Italic.otf") format("woff");
+}
+@font-face {
+  font-family: "Butler";
+  font-style: normal;
+  font-weight: bold;
+  src: url("/fonts/Inter-Light.otf") format("woff2"), url("/fonts/Inter-Light.otf") format("woff");
+}
+@font-face {
+  font-family: "Butler";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/Inter-Medium.otf") format("woff2"), url("/fonts/Inter-Medium.otf") format("woff");
+}
+@font-face {
+  font-family: "Butler";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/Inter-SemiBold.otf") format("woff2"), url("/fonts/Inter-SemiBold.otf") format("woff");
+}
+/* Butler Stencil */
+@font-face {
+  font-family: "Butler Stencil";
+  font-style: normal;
+  font-weight: 200;
+  src: url("/fonts/Inter-Thin.otf") format("woff2"), url("/fonts/Inter-Thin.otf") format("woff");
+}
+@font-face {
+  font-family: "Butler Stencil";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/Inter-ThinItalic.otf") format("woff2"), url("/fonts/Inter-ThinItalic.otf") format("woff");
+}/*# sourceMappingURL=fonts.css.map */

@@ -1,0 +1,51 @@
+@mixin breakpoint($min: 0, $max: 0) {
+  $point: type-of($min);
+
+  @if $point == string {
+    @if $min == desktop {
+      @media (min-width: 1024px) {
+        @content;
+      }
+    } @else if $min == tablet-below {
+      @media (max-width: 1023px) {
+        @content;
+      }
+    } @else if $min == tablet {
+      @media (min-width: 768px) {
+        @content;
+      }
+    } @else if $min == mobile {
+      @media (max-width: 767px) {
+        @content;
+      }
+    } @else if $min == xxs {
+      @media (max-width: 374px) {
+        @content;
+      }
+    } @else if $min == xs {
+      @media (max-width: 575px) {
+        @content;
+      }
+    } @else if $min == sm {
+      @media (min-width: 576px) {
+        @content;
+      }
+    } @else if $min == md {
+      @media (min-width: 768px) {
+        @content;
+      }
+    } @else if $min == lg {
+      @media (min-width: 992px) {
+        @content;
+      }
+    } @else if $min == xl {
+      @media (min-width: 1200px) {
+        @content;
+      }
+    } @else if $min == xxl {
+      @media (min-width: 1420px) {
+        @content;
+      }
+    }
+  }
+}
