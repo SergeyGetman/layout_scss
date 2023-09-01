@@ -18,6 +18,16 @@ body::before {
   background-repeat: no-repeat;
   opacity: 0.9;
 }
+@media (max-width: 768px) {
+  body::before {
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    display: flex;
+    top: 27%;
+    margin: 0 auto;
+  }
+}
 
 p,
 ul {
@@ -29,6 +39,19 @@ header {
   display: flex;
   background: linear-gradient(to right, #161a16 0%, #161a16 100%);
   padding: 0 310px;
+}
+header .header_content {
+  position: absolute;
+  top: 0;
+  left: -150%;
+  height: 100%;
+  width: 20%;
+  opacity: 0.5;
+  background: linear-gradient(314deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+  width: 234px;
+  transform: skewX(320deg);
+  -webkit-animation: flareAnimationHeader 5s infinite linear;
+  animation: flareAnimationHeader 5s infinite linear;
 }
 @media (max-width: 768px) {
   header {
@@ -188,6 +211,7 @@ header img:hover {
 }
 @media (max-width: 768px) {
   .general-content {
+    height: auto;
     padding: 40px;
   }
 }
@@ -296,6 +320,11 @@ header img:hover {
   margin: 5rem 20rem;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .point {
+    display: none;
+  }
+}
 .point:hover {
   cursor: pointer;
 }
@@ -323,10 +352,18 @@ header img:hover {
   position: relative;
   overflow-x: hidden;
 }
+@media (max-width: 768px) {
+  .footer-content {
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+}
 .footer-content .flare {
   position: absolute;
+  overflow-x: hidden;
   top: 0;
-  height: 200%;
+  height: 100%;
   width: 45px;
   transform: skewX(-45deg);
   -webkit-animation: flareAnimation 3s infinite linear;
@@ -341,9 +378,15 @@ header img:hover {
   margin-left: 65px;
   display: flex;
 }
-.footer-content__items img {
-  margin-left: 85px;
-  z-index: 2;
+@media (max-width: 768px) {
+  .footer-content__items img {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .footer-content__items {
+    padding: 0;
+  }
 }
 .footer-content__items-left {
   height: 45px;
@@ -366,13 +409,40 @@ header img:hover {
   background-position: center;
   border-radius: 99.153px;
 }
+@media (max-width: 768px) {
+  .footer-content__items-left__subscribe {
+    width: 83px;
+    height: 23px;
+    font-size: 10px;
+  }
+}
 .footer-content__items-right {
   display: flex;
+}
+@media (max-width: 768px) {
+  .footer-content__items-right {
+    height: 33px;
+  }
+}
+.footer-content__items-right img {
+  margin-left: 85px;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .footer-content__items-right img {
+    display: flex;
+    width: 212px;
+  }
 }
 .footer-content__icons {
   max-width: 1255px;
   margin-left: 7rem;
   padding: 0px 8px 60px 16px;
+}
+@media (max-width: 768px) {
+  .footer-content__icons {
+    width: 100%;
+  }
 }
 .footer-content__icons-iconUpper {
   padding: 10px;
@@ -380,11 +450,23 @@ header img:hover {
 .footer-content__icons-iconUpper img {
   margin: 0 30px;
 }
+@media (max-width: 768px) {
+  .footer-content__icons-iconUpper img {
+    width: 34px;
+    height: 12px;
+  }
+}
 .footer-content__icons-iconCamel {
   padding: 10px;
 }
 .footer-content__icons-iconCamel img {
   margin: 0 30px;
+}
+@media (max-width: 768px) {
+  .footer-content__icons-iconCamel img {
+    width: 34px;
+    height: 12px;
+  }
 }
 
 footer {
@@ -396,6 +478,19 @@ footer {
 footer a {
   color: rgba(28, 211, 89, 0.6);
 }
+footer p {
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  footer p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 360px) {
+  footer p {
+    font-size: 8px;
+  }
+}
 
 @font-face {
   font-family: "MyFont";
@@ -404,7 +499,7 @@ footer a {
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 20%, 0);
   }
   to {
     opacity: 1;
@@ -414,7 +509,7 @@ footer a {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 20%, 0);
   }
   to {
     opacity: 1;
@@ -457,7 +552,15 @@ footer a {
     left: 150%;
   }
 }
-@keyframes flareAnimation {
+@-webkit-keyframes flareAnimationHeader {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+@keyframes flareAnimationHeader {
   0% {
     left: -150%;
   }

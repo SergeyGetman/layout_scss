@@ -18,6 +18,15 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.9;
+
+    @media (max-width: 768px) {
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      display: flex;
+      top: 27%;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -31,6 +40,24 @@ header {
   display: flex;
   background: linear-gradient(to right, #161a16 0%, #161a16 100%);
   padding: 0 310px;
+
+  & .header_content {
+    position: absolute;
+    top: 0;
+    left: -150%;
+    height: 100%;
+    width: 20%;
+    opacity: 0.5;
+    background: linear-gradient(
+      314deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.4)
+    );
+    width: 234px;
+    transform: skewX(320deg);
+    -webkit-animation: flareAnimationHeader 5s infinite linear;
+    animation: flareAnimationHeader 5s infinite linear;
+  }
 
   @media (max-width: 768px) {
     font-size: 14px;
@@ -190,6 +217,7 @@ header {
   width: 700px;
   padding: 0 310px;
   @media (max-width: 768px) {
+    height: auto;
     padding: 40px;
   }
 
@@ -298,6 +326,10 @@ header {
   margin: 5rem 20rem;
   width: 100%;
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   &:hover {
     cursor: pointer;
   }
@@ -328,10 +360,18 @@ header {
   position: relative;
   overflow-x: hidden;
 
+  @media (max-width: 768px) {
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    margin: 0 auto;
+  }
+
   & .flare {
     position: absolute;
+    overflow-x: hidden;
     top: 0;
-    height: 200%;
+    height: 100%;
     width: 45px;
     transform: skewX(-45deg);
     animation: flareAnimation 3s infinite linear;
@@ -345,15 +385,19 @@ header {
 
   &__items {
     padding: 110px 310px;
-
     background-repeat: no-repeat;
     background-position: left;
     margin-left: 65px;
     display: flex;
 
-    & img {
-      margin-left: 85px;
-      z-index: 2;
+    img {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 0;
     }
 
     &-left {
@@ -376,11 +420,32 @@ header {
         background-repeat: no-repeat;
         background-position: center;
         border-radius: 99.153px;
+
+        @media (max-width: 768px) {
+          width: 83px;
+
+          height: 23px;
+          font-size: 10px;
+        }
       }
     }
 
     &-right {
       display: flex;
+
+      @media (max-width: 768px) {
+        height: 33px;
+      }
+
+      & img {
+        margin-left: 85px;
+        z-index: 2;
+
+        @media (max-width: 768px) {
+          display: flex;
+          width: 212px;
+        }
+      }
     }
   }
 
@@ -389,11 +454,20 @@ header {
     margin-left: 7rem;
     padding: 0px 8px 60px 16px;
 
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
     &-iconUpper {
       padding: 10px;
 
       & img {
         margin: 0 30px;
+
+        @media (max-width: 768px) {
+          width: 34px;
+          height: 12px;
+        }
       }
     }
 
@@ -402,6 +476,11 @@ header {
 
       & img {
         margin: 0 30px;
+
+        @media (max-width: 768px) {
+          width: 34px;
+          height: 12px;
+        }
       }
     }
   }
@@ -415,6 +494,18 @@ footer {
   a {
     color: rgba(28, 211, 89, 0.6);
   }
+
+  & p {
+    font-size: 16px;
+
+    @media (max-width: 768px) {
+      font-size: 10px;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 8px;
+    }
+  }
 }
 
 @font-face {
@@ -425,7 +516,7 @@ footer {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 20%, 0);
   }
 
   to {
@@ -455,7 +546,7 @@ footer {
   }
 }
 
-@keyframes flareAnimation {
+@keyframes flareAnimationHeader {
   0% {
     left: -150%;
   }
